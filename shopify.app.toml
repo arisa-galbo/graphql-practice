@@ -3,7 +3,7 @@
 client_id = "f432f4ee780d62f3cc519615dc250e69"
 name = "graphql-practice"
 handle = "graphql-practice"
-application_url = "https://graphql-practice.onrender.com"
+application_url = "https://graphql-practice-cv2w.onrender.com"
 embedded = true
 
 [build]
@@ -17,15 +17,15 @@ scopes = "read_customers,read_draft_orders,read_orders,read_products,write_custo
 
 [auth]
 redirect_urls = [
-  "https://graphql-practice.onrender.com/auth/callback",
-  "https://graphql-practice.onrender.com/auth/shopify/callback",
-  "https://graphql-practice.onrender.com/api/auth/callback",
-  "https://graphql-practice.onrender.com/auth/callback",
-  "https://graphql-practice.onrender.com/auth/shopify/callback",
-  "https://graphql-practice.onrender.com/api/auth/callback",
-  "https://graphql-practice.onrender.com/auth/callback",
-  "https://graphql-practice.onrender.com/auth/shopify/callback",
-  "https://graphql-practice.onrender.com/api/auth/callback"
+  "https://graphql-practice-cv2w.onrender.com/auth/callback",
+  "https://graphql-practice-cv2w.onrender.com/auth/shopify/callback",
+  "https://graphql-practice-cv2w.onrender.com/api/auth/callback",
+  "https://graphql-practice-cv2w.onrender.com/auth/callback",
+  "https://graphql-practice-cv2w.onrender.com/auth/shopify/callback",
+  "https://graphql-practice-cv2w.onrender.com/api/auth/callback",
+  "https://graphql-practice-cv2w.onrender.com/auth/callback",
+  "https://graphql-practice-cv2w.onrender.com/auth/shopify/callback",
+  "https://graphql-practice-cv2w.onrender.com/api/auth/callback"
 ]
 
 [webhooks]
