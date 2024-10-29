@@ -1,0 +1,51 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "f432f4ee780d62f3cc519615dc250e69"
+name = "graphql-practice"
+handle = "graphql-practice"
+application_url = "https://joe-technical-bracelet-systematic.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "starting-to-build-app.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_customers,read_draft_orders,read_orders,read_products,write_customers,write_draft_orders,write_orders,write_products"
+
+[auth]
+redirect_urls = [
+  "https://once-policies-dollars-speech.trycloudflare.com/auth/callback",
+  "https://once-policies-dollars-speech.trycloudflare.com/auth/shopify/callback",
+  "https://once-policies-dollars-speech.trycloudflare.com/api/auth/callback",
+  "https://nano-liver-cayman-majority.trycloudflare.com/auth/callback",
+  "https://nano-liver-cayman-majority.trycloudflare.com/auth/shopify/callback",
+  "https://nano-liver-cayman-majority.trycloudflare.com/api/auth/callback",
+  "https://joe-technical-bracelet-systematic.trycloudflare.com/auth/callback",
+  "https://joe-technical-bracelet-systematic.trycloudflare.com/auth/shopify/callback",
+  "https://joe-technical-bracelet-systematic.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-10"
+
+  [[webhooks.subscriptions]]
+  compliance_topics = [ "customers/data_request" ]
+  uri = "/webhooks/customers/data_request"
+
+  [[webhooks.subscriptions]]
+  compliance_topics = [ "customers/redact" ]
+  uri = "/webhooks/customers/redact"
+
+  [[webhooks.subscriptions]]
+  compliance_topics = [ "shop/redact" ]
+  uri = "/webhooks/shop/redact"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/uninstalled" ]
+  uri = "/webhooks/app/uninstalled"
+
+[pos]
+embedded = false
