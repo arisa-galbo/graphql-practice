@@ -1,5 +1,7 @@
 import { authenticate, unauthenticated } from "../../../shopify.server";
 
+import { authenticate, unauthenticated } from "../../../shopify.server";
+
 // Use private access token on requests that don't come from Shopify
 const { storefront } = await unauthenticated.storefront(shop);
 
@@ -53,13 +55,17 @@ async function addToCart(variantId, quantity) {
   
     if (result.errors) {
       console.error('Errors:', result.errors);
+      return; // エラーがあった場合は何も返さず終了
     }
   
     if (result.data) {
       console.log('Cart:', result.data.cartCreate.cart);
+
+      // 商品がカートに追加された後にリダイレクト
+      window.location.href = "https://starting-to-build-app.myshopify.com/cart"; // カートページへのリダイレクト
+
       return result.data.cartCreate.cart;
     } else {
       console.error('Failed to add to cart');
     }
-  }
-  
+}
